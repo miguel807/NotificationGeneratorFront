@@ -143,6 +143,7 @@ const handleMarkAsRead = async (id) => {
             <table className="min-w-full divide-y divide-gray-200">
               <thead className="bg-gray-50">
                 <tr>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Event</th>
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Channel</th>
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Type</th>
@@ -154,6 +155,7 @@ const handleMarkAsRead = async (id) => {
               <tbody className="bg-white divide-y divide-gray-200">
                 {notifications.map((notification) => (
                   <tr key={notification.id}>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{notification.createdAt}</td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{notification.eventName}</td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{notification.channel}</td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{notification.type}</td>
